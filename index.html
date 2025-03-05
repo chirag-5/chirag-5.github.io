@@ -20,12 +20,12 @@
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem; /* Adjusted for smaller screens */
             color: #76c7c0;
         }
         section {
-            padding: 50px;
-            margin: 30px;
+            padding: 20px; /* Reduced padding for smaller screens */
+            margin: 15px; /* Reduced margin for smaller screens */
             background: #242424;
             border-radius: 20px;
             box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
@@ -35,6 +35,14 @@
             padding: 10px;
             margin-top: 20px;
             font-weight: bold;
+        }
+        iframe {
+            width: 100%; /* Make iframes responsive */
+            height: auto; /* Adjust height automatically */
+            aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+        }
+        p {
+            font-size: 1rem; /* Adjusted for readability on smaller screens */
         }
     </style>
 </head>
@@ -48,14 +56,14 @@
         <h2>The Power of Exercise</h2>
         <p>Exercise boosts your energy, enhances your mood, and improves overall health.</p>
         <p>Regular movement helps you stay fit and keeps your mind sharp.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/XqTcye_acTI?si=OzH8tD_QdjGTJY2z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/XqTcye_acTI?si=OzH8tD_QdjGTJY2z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
     
     <section>
         <h2>Sleep: The Ultimate Hack</h2>
         <p>Quality sleep helps with memory, focus, and overall mental health.</p>
         <p>Skipping sleep is not a flex—it's a slow self-sabotage.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/_aAmaCeq9v4" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/_aAmaCeq9v4" frameborder="0" allowfullscreen></iframe>
     </section>
     
     <footer>
