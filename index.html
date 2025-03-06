@@ -3,71 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Matters: Exercise & Sleep</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Chirag Narwal Tribute</title>
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #121212;
-            color: #ffffff;
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: black;
+            color: #E4A13F;
+            scroll-behavior: smooth;
             text-align: center;
+            width: 100vw;
+            overflow-x: hidden;
         }
-        header {
-            background: #1e1e1e;
+
+        .section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .name {
+            font-size: 10vw;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .subtitle, .footer {
+            position: absolute;
+            font-size: 5vw;
+        }
+
+        .subtitle { top: 10%; right: 5%; }
+        .footer { bottom: 10%; right: 5%; }
+
+        .wave {
+            position: absolute;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(228,161,63,0.5) 10%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        .wave-left { left: -25vw; bottom: -25vw; }
+        .wave-right { right: -15vw; top: -15vw; }
+
+        .section-two, .section-three, .section-four {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            min-height: 100vh;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
         }
-        h1 {
-            font-size: 2rem; /* Adjusted for smaller screens */
-            color: #76c7c0;
+
+        .text-container, .image-container {
+            width: 100%;
+            padding: 20px;
         }
-        section {
-            padding: 20px; /* Reduced padding for smaller screens */
-            margin: 15px; /* Reduced margin for smaller screens */
-            background: #242424;
+
+        .text-container h1 { font-size: 8vw; }
+
+        .text-container ul {
+            list-style-type: none;
+            font-size: 5vw;
+            padding: 0;
+        }
+
+        .text-container ul li { margin: 10px 0; }
+
+        .image-container img {
+            width: 100%;
+            max-width: 400px;
             border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(228,161,63,0.5);
         }
-        footer {
-            background: #1e1e1e;
-            padding: 10px;
-            margin-top: 20px;
-            font-weight: bold;
+
+        .visible { opacity: 1; }
+
+        .section-four {
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 50px 20px;
         }
-        iframe {
-            width: 100%; /* Make iframes responsive */
-            height: auto; /* Adjust height automatically */
-            aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+
+        .section-four h1 { font-size: 10vw; }
+
+        .section-four a {
+            color: #1DA1F2;
+            text-decoration: none;
+            font-size: 5vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        p {
-            font-size: 1rem; /* Adjusted for readability on smaller screens */
+
+        .section-four a:hover { text-decoration: underline; }
+
+        .linkedin-logo {
+            width: 10vw;
+            height: 10vw;
+            margin-right: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .section-two, .section-three, .section-four {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            .text-container, .image-container { width: 50%; }
+
+            .name { font-size: 100px; }
+
+            .subtitle, .footer { font-size: 20px; }
+
+            .text-container h1 { font-size: 60px; }
+
+            .text-container ul { font-size: 24px; }
+
+            .section-four h1 { font-size: 60px; }
+
+            .section-four a { font-size: 24px; }
+
+            .linkedin-logo {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .section-two, .section-three, .section-four {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            .text-container, .image-container { width: 100%; }
+
+            .name { font-size: 15vw; }
+
+            .subtitle, .footer { font-size: 5vw; }
+
+            .text-container h1 { font-size: 8vw; }
+
+            .text-container ul { font-size: 5vw; }
+
+            .section-four h1 { font-size: 10vw; }
+
+            .section-four a { font-size: 5vw; }
+
+            .linkedin-logo {
+                width: 10vw;
+                height: 10vw;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Why Exercise & Sleep Matter</h1>
-        <p>Take care of your body, it's the only place you have to live.</p>
-    </header>
-    
-    <section>
-        <h2>The Power of Exercise</h2>
-        <p>Exercise boosts your energy, enhances your mood, and improves overall health.</p>
-        <p>Regular movement helps you stay fit and keeps your mind sharp.</p>
-        <iframe src="https://www.youtube.com/embed/XqTcye_acTI?si=OzH8tD_QdjGTJY2z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
-    
-    <section>
-        <h2>Sleep: The Ultimate Hack</h2>
-        <p>Quality sleep helps with memory, focus, and overall mental health.</p>
-        <p>Skipping sleep is not a flex—it's a slow self-sabotage.</p>
-        <iframe src="https://www.youtube.com/embed/_aAmaCeq9v4" frameborder="0" allowfullscreen></iframe>
-    </section>
-    
-    <footer>
-        <p>Stay healthy, stay strong. Your future self will thank you.</p>
-    </footer>
+
+    <div class="section">
+        <div class="wave wave-left"></div>
+        <div class="wave wave-right"></div>
+        <div class="subtitle">GOD BE WITH YOU</div>
+        <div class="name">CHIRAG<br>NARWAL</div>
+        <div class="footer">CLASS OF 57</div>
+    </div>
+
+    <div class="section-two">
+        <div class="text-container">
+            <h1>MY VIBES ?</h1>
+            <ul>
+                <li>POSITIVITY</li>
+                <li>AMBITIOUSNESS</li>
+                <li>HEALTH</li>
+                <li>HIP HOP MUSIC</li>
+                <li>HEALTHY RELATIONSHIPS</li>
+            </ul>
+            <p>#GOD BE WITH YOU</p>
+        </div>
+        <div class="image-container">
+            <img src="D:\main page images\Picture1.jpg" alt="User Image">
+        </div>
+    </div>
+
+    <div class="section-three">
+        <div class="image-container">
+            <img src="D:\main page images\Picture2.jpg" alt="User Image">
+        </div>
+        <div class="text-container">
+            <h1>CLUB SPORTS & PROJECTS</h1>
+            <p>Project 1 -</p>
+            <p>Project 2 -</p>
+            <p><small>OFCOURSE I'M SKIING OVER HERE</small></p>
+        </div>
+    </div>
+
+    <div class="section-four">
+        <div class="text-container">
+            <h1>Slide in DM's</h1>
+            <a href="https://www.linkedin.com/in/chirag-narwal-21958032a/" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRokEYt0yyh6uNDKL8uksVLlhZ35laKNQgZ9g&s" alt="LinkedIn Logo" class="linkedin-logo">
+                Connect on LinkedIn
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("scroll", function() {
+            document.querySelectorAll(".section-two, .section-three, .section-four").forEach(section => {
+                if (section.getBoundingClientRect().top < window.innerHeight * 0.75) {
+                    section.classList.add("visible");
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
